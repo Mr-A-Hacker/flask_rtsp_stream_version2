@@ -27,7 +27,7 @@ Access the stream at:
 
 ---
 
-## 🧠 FFmpeg MJPEG Loop (Optional)
+## 🧠 FFmpeg MJPEG Loop 
 
 Use this loop to serve MJPEG from your RTSP camera:
 
