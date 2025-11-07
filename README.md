@@ -110,3 +110,8 @@ Tested with:
 
 Built and maintained by [Mr-A-Hacker](https://github.com/Mr-A-Hacker)  
 For forensic clarity, teachable deployment, and cinematic documentation.
+
+
+
+<img width="374" height="328" alt="5" src="https://github.com/user-attachments/assets/2fd51b74-0bec-4fe4-b495-b6738ab8287f" />
+
