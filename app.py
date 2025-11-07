@@ -26,17 +26,20 @@ def generate_frames():
 def record_video_loop():
     while True:
         cam = get_camera()
+        width = int(cam.get(cv2.CAP_PROP_FRAME_WIDTH))
+        height = int(cam.get(cv2.CAP_PROP_FRAME_HEIGHT))
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         filename = f"recordings/stream_{timestamp}.avi"
         fourcc = cv2.VideoWriter_fourcc(*'XVID')
-        out = cv2.VideoWriter(filename, fourcc, 20.0, (640, 480))
+        out = cv2.VideoWriter(filename, fourcc, 20.0, (width, height))
 
         start_time = time.time()
-        while time.time() - start_time < 600:  # 10 minutes
+        while time.time() - start_time < 1800:  # 30 minutes
             success, frame = cam.read()
             if success:
                 out.write(frame)
             else:
+                print("⚠️ Frame read failed")
                 break
         out.release()
         cam.release()
@@ -49,7 +52,7 @@ def cleanup_old_videos():
             fpath = os.path.join("recordings", fname)
             if os.path.isfile(fpath):
                 created = datetime.fromtimestamp(os.path.getctime(fpath))
-                if now - created > timedelta(hours=2):
+                if now - created > timedelta(hours=4):  # changed from 2 to 4
                     os.remove(fpath)
         time.sleep(300)  # every 5 minutes
 
