@@ -1,15 +1,15 @@
 # flask_rtsp_stream_version2
 
-**Upgraded LAN-only RTSP viewer and recorder** — rebuilt from scratch for forensic logging, legacy deployment, and Raspberry Pi optimization.
+**Upgraded LAN-only RTSP viewer and recorder** — rebuilt from scratch for forensic logging, cinematic deployment, and Raspberry Pi optimization.
 
 This is the newer version of [`flask_rtsp_stream`](https://github.com/Mr-A-Hacker/flask_rtsp_stream), now with:
 
-- 🔁 10-minute video recording segments  
-- 🧹 Auto-deletion after 2 hours  
-- 🧵 Safe threading with separate camera instances  
-- 🖥️ MJPEG stream viewer with fullscreen toggle  
-- 🔄 Auto-refresh every 10 minutes (frontend only)  
-- 🛡️ LAN-only operation — no cloud, no exposure  
+- 🎥 **30-minute video recording segments**
+- 🧹 **Auto-deletion after 4 hours**
+- 🧵 Safe threading with isolated camera instances
+- 🖥️ MJPEG stream viewer with fullscreen toggle
+- 🔄 Auto-refresh every 10 minutes (frontend only)
+- 🛡️ LAN-only operation — no cloud, no exposure
 
 ---
 
@@ -27,7 +27,7 @@ Access the stream at:
 
 ---
 
-## 🧠 FFmpeg MJPEG Loop 
+## 🧠 FFmpeg MJPEG Loop (Optional)
 
 Use this loop to serve MJPEG from your RTSP camera:
 
@@ -53,7 +53,7 @@ Access MJPEG at:
 - Flask  
 - OpenCV  
 - HTML/CSS (Bootstrap optional)  
-- Threading + Local file system  
+- Threading + Local file system
 
 ---
 
@@ -73,36 +73,37 @@ flask_rtsp_stream_version2/
 ## 📡 RTSP Compatibility
 
 Tested with:
-- Raspberry Pi 4 (Raspbian)  
-- Ubuntu 22.04  
-- RTSP camera with H.264 stream  
+- Raspberry Pi 4 (Raspbian)
+- Ubuntu 22.04
+- RTSP camera with H.264 stream
 
 ---
 
-## 📂 Recording Logic
+## 🎞️ Recording Logic
 
-- Records 10-minute `.avi` segments  
-- Saves to `recordings/` folder  
-- Deletes files older than 2 hours  
-- All storage is local — no cloud dependencies  
+- Records **30-minute** `.avi` segments
+- Saves to `recordings/` folder
+- Deletes files older than **4 hours**
+- Resolution matches camera stream dynamically
+- All storage is local — no cloud dependencies
 
 ---
 
 ## 💡 Viewer Features
 
-- MJPEG stream via `/video_feed`  
-- Fullscreen toggle in browser  
-- Auto-refresh every 10 minutes  
-- Designed for LAN-only access  
+- MJPEG stream via `/video_feed`
+- Fullscreen toggle in browser
+- Auto-refresh every 10 minutes
+- Designed for LAN-only access
 
 ---
 
 ## 🔐 Security Notes
 
-- No external APIs  
-- No user tracking  
-- No cloud uploads  
-- All data stays on your device  
+- No external APIs
+- No user tracking
+- No cloud uploads
+- All data stays on your device
 
 ---
 
@@ -112,6 +113,4 @@ Built and maintained by [Mr-A-Hacker](https://github.com/Mr-A-Hacker)
 For forensic clarity, teachable deployment, and cinematic documentation.
 
 
-
-<img width="374" height="328" alt="5" src="https://github.com/user-attachments/assets/2fd51b74-0bec-4fe4-b495-b6738ab8287f" />
-
+<img width="374" height="328" alt="5" src="https://github.com/user-attachments/assets/255c6e49-bcd0-4b65-a845-c7e8e2bb94ab" />
