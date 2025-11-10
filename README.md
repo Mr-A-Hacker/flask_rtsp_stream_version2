@@ -15,6 +15,53 @@ This is the newer version of [`flask_rtsp_stream`](https://github.com/Mr-A-Hacke
 
 ## 🚀 Quick Start
 
+
+## ⚙️ Camera IP Setup (Critical Step)
+
+Before running the project, you **must update the camera IP address** in `app.py` to match your own RTSP camera.
+
+### 🔍 Step 1: Find Your Camera’s IP
+
+To locate your RTSP camera’s IP address:
+
+- Log into your **router’s admin panel** (usually at `192.168.0.1` or `192.168.1.1`)
+- Look under **Connected Devices** or **DHCP Clients**
+- Find the device name that matches your camera brand/model
+- Copy the IP address (e.g., `192.168.2.101`)
+
+Alternatively, you can use a network scanner like `arp -a` or `nmap` to discover active devices.
+
+### 📝 Step 2: Update `app.py`
+
+Open the file `app.py` in any code editor.  
+Find the line that looks like this:
+
+```python
+camera_ip = "rtsp://192.168.2.244:554/stream1"
+```
+
+Replace `192.168.2.244` with your actual camera IP. For example:
+
+```python
+camera_ip = "rtsp://192.168.2.101:554/stream1"
+```
+
+Save the file.
+
+### ✅ Step 3: Run the App
+
+Now you're ready to launch:
+
+```bash
+python app.py
+```
+
+Access the stream at:  
+`http://<your-local-IP>:5051`
+
+
+
+
 ```bash
 git clone https://github.com/Mr-A-Hacker/flask_rtsp_stream_version2.git
 cd flask_rtsp_stream_version2
