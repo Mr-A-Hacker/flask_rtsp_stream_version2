@@ -31,6 +31,13 @@ To locate your RTSP camera’s IP address:
 
 Alternatively, you can use a network scanner like `arp -a` or `nmap` to discover active devices.
 
+#### 🧪 Optional: Use `nmap` to scan your LAN
+
+```bash
+nmap -sn 192.168.2.0/24
+```
+
+This command sends ping requests across your subnet and lists active devices with their IPs.
 ### 📝 Step 2: Update `app.py`
 
 Open the file `app.py` in any code editor.  
