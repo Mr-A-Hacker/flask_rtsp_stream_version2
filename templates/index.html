@@ -30,9 +30,14 @@
     }
   </style>
   <script>
-    // Auto-refresh every 10 minutes
-    setTimeout(function() {
-      location.reload();
+    // Soft reload every 10 minutes
+    setInterval(function() {
+      const video = document.getElementById("video-stream");
+      if (video) {
+        const src = video.src;
+        video.src = "";   // clear temporarily
+        video.src = src;  // reassign to trigger reload
+      }
     }, 600000); // 600,000 ms = 10 minutes
 
     // Fullscreen toggle
@@ -50,6 +55,6 @@
 </head>
 <body>
   <button onclick="toggleFullscreen()">Toggle Fullscreen</button>
-  <img src="{{ url_for('video_feed') }}" alt="Live Camera Feed">
+  <img id="video-stream" src="{{ url_for('video_feed') }}" alt="Live Camera Feed">
 </body>
 </html>
