@@ -17,16 +17,25 @@
       max-height: 100vh;
       object-fit: contain;
     }
+    /* Small box-style button */
     button {
       position: fixed;
       top: 10px;
       right: 10px;
-      padding: 10px 20px;
-      font-size: 16px;
+      width: 40px;
+      height: 40px;
       background-color: #222;
       color: #fff;
       border: none;
+      border-radius: 6px;
       cursor: pointer;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    button:hover {
+      background-color: #444;
     }
   </style>
   <script>
@@ -54,7 +63,8 @@
   </script>
 </head>
 <body>
-  <button onclick="toggleFullscreen()">Toggle Fullscreen</button>
+  <!-- Small box button -->
+  <button onclick="toggleFullscreen()">⛶</button>
   <img id="video-stream" src="{{ url_for('video_feed') }}" alt="Live Camera Feed">
 </body>
 </html>
