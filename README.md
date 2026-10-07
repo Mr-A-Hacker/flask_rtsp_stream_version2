@@ -1,4 +1,11 @@
 > ## 👋 Start Here
+> A later Flask RTSP streaming experiment. **For users:** compare this version with the earlier project to see how camera streaming evolved.
+>
+> **Safety:** Use security, camera, scanning, and network features only on systems and networks you own or are explicitly authorized to test.
+
+---
+
+> ## 👋 Start Here
 > An iteration of the Flask RTSP streaming project. **For users:** this repository documents another stage of the camera-streaming experiments and is useful for comparing versions.
 >
 > **Safety:** Use security, camera, scanning, and network features only on systems and networks you own or are explicitly authorized to test.
